@@ -13,9 +13,15 @@ const Home = () => {
   console.log(productArray);
   return (
       <div className='productContainer'>
-         
-      </div>
+         <ul>
 
+         {  
+            products.map((prod)=>(
+                <li>{prod.pname}</li>
+                ))
+            }
+        </ul>
+      </div>
   )
 }
 
