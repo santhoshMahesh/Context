@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import {faker} from '@faker-js/faker'
+import SingleProduct from './SingleProduct'
+
+
 const Home = () => {
-  const productArray=[...Array(20)].map(()=>({
+  const productArray=[...Array(30)].map(()=>({
     id:faker.string.uuid(),
     pname:faker.commerce.productName(),
     price:faker.commerce.price(),
-    image:faker.image.urlLoremFlickr({ category: 'fashion' })
+    image:faker.image.urlLoremFlickr({ category: 'cats' })
  
   }))
 
@@ -13,14 +16,13 @@ const Home = () => {
   console.log(productArray);
   return (
       <div className='productContainer'>
-         <ul>
-
+      
          {  
             products.map((prod)=>(
-                <li>{prod.pname}</li>
-                ))
+                <SingleProduct prop={prod}/>
+            ))
             }
-        </ul>
+
       </div>
   )
 }
