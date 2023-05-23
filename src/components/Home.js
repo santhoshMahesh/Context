@@ -12,14 +12,19 @@ const Home = () => {
  
   }))
 
+  const [cart,setCart]=useState([]);
   const [products]=useState(productArray)
-  console.log(productArray);
+  
+  console.log(cart)
+  
+
+
   return (
       <div className='productContainer'>
       
          {  
             products.map((product)=>(
-                <SingleProduct prop={product}/>
+                <SingleProduct key={product.id} prop={product} cart={cart} setCart={setCart}/>
             ))
           }
       </div>
