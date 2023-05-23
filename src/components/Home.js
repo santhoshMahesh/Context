@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {faker} from '@faker-js/faker'
 import SingleProduct from './SingleProduct.js'
 
-
+faker.seed(100);
 const Home = () => {
   const productArray=[...Array(30)].map(()=>({
     id:faker.string.uuid(),
