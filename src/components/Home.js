@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import {faker} from '@faker-js/faker'
 import SingleProduct from './SingleProduct.js'
 
+
 faker.seed(100);
-const Home = () => {
+
+const Home = ({cart,setCart}) => {
   const productArray=[...Array(30)].map(()=>({
     id:faker.string.uuid(),
     pname:faker.commerce.productName(),
@@ -12,12 +14,8 @@ const Home = () => {
  
   }))
 
-  const [cart,setCart]=useState([]);
   const [products]=useState(productArray)
-  
   console.log(cart)
-  
-
 
   return (
       <div className='productContainer'>
