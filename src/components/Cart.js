@@ -6,13 +6,13 @@ export const Cart = ({cart,setCart}) => {
   const [total,setTotal]=useState(0)
   useEffect(()=>{
     setTotal(cart.reduce((acc,curr)=>Number(acc)+Number(curr.price),0))
-  },[cart])
+  },[])
   
   return (
       <div>
         <span style={{fontSize:30}}>My Cart</span>
         <br />
-        <span style={{fonstSize:30}}>{total}</span>
+        <div className='total' style={{fonstSize:30}}><h1>{total}</h1></div>
         <div className='productContainer'>
         {  
           cart.map((product)=>(
