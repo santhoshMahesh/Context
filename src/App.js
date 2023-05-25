@@ -6,17 +6,17 @@ import './app.css'
 import { useState } from 'react';
 
 function App() {
- const [cart,setCart]=useState([]);
+
  
   return (
     <BrowserRouter>
     <Header />
     <div className="App">
       <Route path="/" exact>
-        <Home  cart={cart} setCart={setCart}/>
+        <Home/>
       </Route>
       <Route path="/cart">
-        <Cart cart={cart} setCart={setCart}/>
+        <Cart/>
       </Route>
     </div>
   </BrowserRouter>
