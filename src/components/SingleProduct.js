@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const SingleProduct = ({prop,cart,setCart}) => {
  
   return (
@@ -9,7 +10,6 @@ const SingleProduct = ({prop,cart,setCart}) => {
         <span style={{fontWeight:700}}>{prop.pname}</span>
         <span>₹ {prop.price.substring(0,3)}</span>
       </div>
-   
    
      {cart.includes(prop)?
       (<button className='add' onClick={()=>{

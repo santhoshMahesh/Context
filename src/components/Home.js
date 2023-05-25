@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import {faker} from '@faker-js/faker'
 import SingleProduct from './SingleProduct.js'
 
 
-faker.seed(100);
 
+faker.seed(100);
 const Home = ({cart,setCart}) => {
+  
   const productArray=[...Array(30)].map(()=>({
     id:faker.string.uuid(),
     pname:faker.commerce.productName(),
@@ -13,6 +14,8 @@ const Home = ({cart,setCart}) => {
     image:faker.image.urlLoremFlickr({ category: 'cats' })
  
   }))
+  
+ 
 
   const [products]=useState(productArray)
   console.log(cart)
