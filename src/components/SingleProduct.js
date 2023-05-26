@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { CartState } from '../Context';
 
 
-const SingleProduct = ({prop,cart,setCart}) => {
+const SingleProduct = ({prop}) => {
  
+  const {cart,setCart}=CartState();
+
   return (
     <div className='products'>
       <img src={prop.image} alt={prop.pname}/>

@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './style.css'
 import SingleProduct from './SingleProduct'
+import  {CartState}  from '../Context'
 
-export const Cart = ({cart,setCart}) => {
+export const Cart = () => {
   const [total,setTotal]=useState(0)
+  
+  const {cart,setCart}=CartState();
+
   useEffect(()=>{
     setTotal(cart.reduce((acc,curr)=>Number(acc)+Number(curr.price),0))
   },[])

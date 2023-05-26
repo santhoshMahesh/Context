@@ -3,7 +3,7 @@ import {BrowserRouter, Route} from "react-router-dom"
 import  Cart  from './components/Cart.js';
 import  Home  from './components/Home.js';
 import './app.css'
-import { useState } from 'react';
+
 
 function App() {
 
